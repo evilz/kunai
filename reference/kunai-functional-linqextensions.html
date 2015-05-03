@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>license</title>
+    <title>LinqExtensions - Kunai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="kunai4ninja"/>
+    <meta name="description" content=""/>
     <meta name="author" content="Vincent Bourdon"/>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -45,19 +45,76 @@
 	<div class="row">
 		<div class="col-md-9" id="main">
 			
-<p>Copyright (c) Vincent Bourdon. All rights reserved.</p>
 
-<p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-these files except in compliance with the License. You may obtain a copy of the
-License at</p>
 
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
 
-<p>Unless required by applicable law or agreed to in writing, software distributed
-under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied. See the License for the
-specific language governing permissions and limitations under the License.</p>
+<h1>LinqExtensions</h1>
+<div class="xmldoc">
+</div>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
 
+          <code onmouseout="hideTip(event, '93', 93)" onmouseover="showTip(event, '93', 93)">
+            Distinct(this, keySelector)
+          </code>
+          <div class="tip" id="93">
+            <strong>Signature:</strong> (this:IEnumerable&lt;&#39;T&gt; * keySelector:Func&lt;&#39;T,&#39;TKey&gt;) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T, 'TKey          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '94', 94)" onmouseover="showTip(event, '94', 94)">
+            OrderBy(list, sortExpression)
+          </code>
+          <div class="tip" id="94">
+            <strong>Signature:</strong> (list:IEnumerable&lt;&#39;T&gt; * sortExpression:string) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '95', 95)" onmouseover="showTip(event, '95', 95)">
+            Pivot(...)
+          </code>
+          <div class="tip" id="95">
+            <strong>Signature:</strong> (source:IEnumerable&lt;&#39;TSource&gt; * firstKeySelector:Func&lt;&#39;TSource,&#39;TFirstKey&gt; * secondKeySelector:Func&lt;&#39;TSource,&#39;TSecondKey&gt; * aggregate:Func&lt;IEnumerable&lt;&#39;TSource&gt;,&#39;TValue&gt;) -&gt; Dictionary&lt;&#39;TFirstKey,Dictionary&lt;&#39;TSecondKey,&#39;TValue&gt;&gt;<br />
+                          <strong>Type parameters:</strong> 'TSource, 'TFirstKey, 'TSecondKey, 'TValue          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '96', 96)" onmouseover="showTip(event, '96', 96)">
+            ToDictionary(groupings)
+          </code>
+          <div class="tip" id="96">
+            <strong>Signature:</strong> groupings:IEnumerable&lt;IGrouping&lt;&#39;TKey,&#39;TValue&gt;&gt; -&gt; Dictionary&lt;&#39;TKey,List&lt;&#39;TValue&gt;&gt;<br />
+                          <strong>Type parameters:</strong> 'TKey, 'TValue          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 		</div>
 		<div class="col-md-3">

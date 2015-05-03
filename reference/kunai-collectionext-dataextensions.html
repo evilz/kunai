@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>DataExtensions - Kunai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Vincent Bourdon"/>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  	<!-- Twitter Bootstrap -->
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+
+  	<!-- Twitter Bootstrap -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="http://www.evilznet.com/kunai/content/style.css" />
+    <script type="text/javascript" src="http://www.evilznet.com/kunai/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div class="container">
+
+
+	<div class="masthead">
+		<ul class="nav nav-pills pull-right">
+			<li><a class="btn btn-flat btn-default" href="http://www.evilznet.com">evilznet.com <div class="ripple-wrapper"></div></a></li>
+			<li><a class="btn btn-flat btn-default" href="http://github.com/evilz/Kunai">github page <div class="ripple-wrapper"></div></a></li>
+		</ul>
+		
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-9" id="main">
+			
+
+
+
+<h1>DataExtensions</h1>
+<div class="xmldoc">
+</div>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            Clone(dataRow, parentTable)
+          </code>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> (dataRow:DataRow * parentTable:DataTable) -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          <p>Creates a cloned and detached copy of a DataRow instance</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            Dedup(tblIn, KeyColName)
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> (tblIn:DataTable * KeyColName:string) -&gt; DataTable<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            GetBoolean(dataReader, fieldName)
+          </code>
+          <div class="tip" id="4">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string) -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetBoolean method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            GetDateTime(...)
+          </code>
+          <div class="tip" id="5">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:DateTime) -&gt; DateTime<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetDateTime method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            GetDecimal(...)
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:decimal) -&gt; decimal<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetDecimal method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            GetDouble(...)
+          </code>
+          <div class="tip" id="7">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:float) -&gt; float<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetDouble method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            GetFloat(...)
+          </code>
+          <div class="tip" id="8">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:float32) -&gt; float32<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetFloat method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            GetGuid(...)
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:Guid) -&gt; Guid<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetGuid method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            GetInt16(...)
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:int16) -&gt; int16<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetInt16 method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            GetInt32(...)
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:int) -&gt; int<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetInt32 method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+            GetInt64(...)
+          </code>
+          <div class="tip" id="12">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:int64) -&gt; int64<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetInt64 method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            GetString(...)
+          </code>
+          <div class="tip" id="13">
+            <strong>Signature:</strong> (dataReader:IDataReader * fieldName:string * defaultValue:string) -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This method extends the GetString method of the data reader to allow calling by the field name</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            SelectRows(...)
+          </code>
+          <div class="tip" id="14">
+            <strong>Signature:</strong> (dt:DataTable * whereExpression:string * orderByExpression:string) -&gt; DataTable<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+            ToCSV(table, delimiter, includeHeader)
+          </code>
+          <div class="tip" id="15">
+            <strong>Signature:</strong> (table:DataTable * delimiter:string * includeHeader:bool) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '16', 16)" onmouseover="showTip(event, '16', 16)">
+            ToCSV(...)
+          </code>
+          <div class="tip" id="16">
+            <strong>Signature:</strong> (dataReader:IDataReader * includeHeaderAsFirstRow:bool * separator:string) -&gt; List&lt;string&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+            ToDataTable(varlist)
+          </code>
+          <div class="tip" id="17">
+            <strong>Signature:</strong> varlist:IEnumerable&lt;&#39;T&gt; -&gt; DataTable<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+            ToHashTable(dr)
+          </code>
+          <div class="tip" id="18">
+            <strong>Signature:</strong> dr:DataRow -&gt; Hashtable<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.evilznet.com/kunai/img/logo.png" alt="F# Project" style="width: 150px; margin: 10px"/>
+			<ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+				<li class="nav-header">Kunai</li>
+				<li><a href="http://www.evilznet.com/kunai/index.html">Home page</a></li>
+				<li class="divider"></li>
+				<li><a href="http://nuget.org/packages/Kunai">Get Library via NuGet</a></li>
+				<li><a href="http://github.com/evilz/Kunai">Source Code on GitHub</a></li>
+				<li><a href="http://www.evilznet.com/kunai/license.html">License</a></li>
+				<li><a href="http://www.evilznet.com/kunai/release-notes.html">Release Notes</a></li>
+
+				<li class="nav-header">Getting started</li>
+				<li><a href="http://www.evilznet.com/kunai/tutorial.html">Sample tutorial</a></li>
+
+				<li class="nav-header">Documentation</li>
+				<li><a href="http://www.evilznet.com/kunai/reference/index.html">API Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$(".table.table-bordered").addClass("panel panel-info");
+		$(".table.table-bordered thead").addClass("panel-heading");
+		
+	})
+</script>
+</body>
+  </html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>EnumerableExtensions - Kunai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Vincent Bourdon"/>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  	<!-- Twitter Bootstrap -->
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+
+  	<!-- Twitter Bootstrap -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="http://www.evilznet.com/kunai/content/style.css" />
+    <script type="text/javascript" src="http://www.evilznet.com/kunai/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div class="container">
+
+
+	<div class="masthead">
+		<ul class="nav nav-pills pull-right">
+			<li><a class="btn btn-flat btn-default" href="http://www.evilznet.com">evilznet.com <div class="ripple-wrapper"></div></a></li>
+			<li><a class="btn btn-flat btn-default" href="http://github.com/evilz/Kunai">github page <div class="ripple-wrapper"></div></a></li>
+		</ul>
+		
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-9" id="main">
+			
+
+
+
+<h1>EnumerableExtensions</h1>
+<div class="xmldoc">
+</div>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+            AddElement(list, item)
+          </code>
+          <div class="tip" id="19">
+            <strong>Signature:</strong> (list:IList&lt;&#39;T&gt; * item:&#39;T) -&gt; IList&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+            AddElementIf(list, condition, item)
+          </code>
+          <div class="tip" id="20">
+            <strong>Signature:</strong> (list:IList&lt;&#39;T&gt; * condition:bool * item:&#39;T) -&gt; IList&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+            AddElementRange(list, items)
+          </code>
+          <div class="tip" id="21">
+            <strong>Signature:</strong> (list:IList&lt;&#39;T&gt; * items:IEnumerable&lt;&#39;T&gt;) -&gt; IList&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+            AddElementRangeIf(...)
+          </code>
+          <div class="tip" id="22">
+            <strong>Signature:</strong> (list:IList&lt;&#39;T&gt; * condition:bool * items:IEnumerable&lt;&#39;T&gt;) -&gt; IList&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
+            AddRange(oc, collection)
+          </code>
+          <div class="tip" id="23">
+            <strong>Signature:</strong> (oc:ObservableCollection&lt;&#39;T&gt; * collection:IEnumerable&lt;&#39;T&gt;) -&gt; unit<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+            Combinations(source, select, repetition)
+          </code>
+          <div class="tip" id="24">
+            <strong>Signature:</strong> (source:IEnumerable&lt;&#39;T&gt; * select:int * repetition:bool) -&gt; IEnumerable&lt;IEnumerable&lt;&#39;T&gt;&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+            Each(elements, action)
+          </code>
+          <div class="tip" id="25">
+            <strong>Signature:</strong> (elements:IEnumerable&lt;&#39;T&gt; * action:Action&lt;&#39;T&gt;) -&gt; unit<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            GetRandomItem(input)
+          </code>
+          <div class="tip" id="26">
+            <strong>Signature:</strong> input:IList&lt;&#39;T&gt; -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            IndicesOf(obj, value)
+          </code>
+          <div class="tip" id="27">
+            <strong>Signature:</strong> (obj:IEnumerable&lt;&#39;T&gt; * value:&#39;T) -&gt; IEnumerable&lt;int&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
+            IndicesOf(obj, value)
+          </code>
+          <div class="tip" id="28">
+            <strong>Signature:</strong> (obj:IEnumerable&lt;&#39;T&gt; * value:IEnumerable&lt;&#39;T&gt;) -&gt; IEnumerable&lt;int&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+            IsNullOrEmpty(source)
+          </code>
+          <div class="tip" id="29">
+            <strong>Signature:</strong> source:IEnumerable&lt;&#39;T&gt; -&gt; bool<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+            Last(list)
+          </code>
+          <div class="tip" id="30">
+            <strong>Signature:</strong> list:IList&lt;&#39;T&gt; -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+            RandomElements(collection, count)
+          </code>
+          <div class="tip" id="31">
+            <strong>Signature:</strong> (collection:IEnumerable&lt;&#39;T&gt; * count:int) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+            RemoveDuplicates(list, Predicate)
+          </code>
+          <div class="tip" id="32">
+            <strong>Signature:</strong> (list:ICollection&lt;&#39;T&gt; * Predicate:Func&lt;&#39;T,int&gt;) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
+            Reverse(items)
+          </code>
+          <div class="tip" id="33">
+            <strong>Signature:</strong> items:IEnumerable&lt;&#39;T&gt; -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
+            SelectRandom(sequence)
+          </code>
+          <div class="tip" id="34">
+            <strong>Signature:</strong> sequence:IEnumerable&lt;&#39;T&gt; -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
+            SetAllValues(source, value)
+          </code>
+          <div class="tip" id="35">
+            <strong>Signature:</strong> (source:IEnumerable&lt;&#39;T&gt; * value:&#39;T) -&gt; unit<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '36', 36)" onmouseover="showTip(event, '36', 36)">
+            Shuffle(list)
+          </code>
+          <div class="tip" id="36">
+            <strong>Signature:</strong> (list:&#39;T []) -&gt; &#39;T []<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
+            Slice(collection, start, end)
+          </code>
+          <div class="tip" id="37">
+            <strong>Signature:</strong> (collection:IEnumerable&lt;&#39;T&gt; * start:int * end:int) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
+            TakeUntil(collection, endCondition)
+          </code>
+          <div class="tip" id="38">
+            <strong>Signature:</strong> (collection:IEnumerable&lt;&#39;T&gt; * endCondition:Predicate&lt;&#39;T&gt;) -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
+            To(first, last)
+          </code>
+          <div class="tip" id="39">
+            <strong>Signature:</strong> (first:char * last:char) -&gt; IEnumerable&lt;char&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
+            ToEnumerable(enumerator)
+          </code>
+          <div class="tip" id="40">
+            <strong>Signature:</strong> enumerator:IEnumerator&lt;&#39;T&gt; -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+            ToHtmlTable(list, tableSyle)
+          </code>
+          <div class="tip" id="41">
+            <strong>Signature:</strong> (list:IEnumerable&lt;&#39;T&gt; * tableSyle:string) -&gt; string<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+            ToString(list, separator)
+          </code>
+          <div class="tip" id="42">
+            <strong>Signature:</strong> (list:IEnumerable&lt;&#39;T&gt; * separator:string) -&gt; string<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            Transpose(values)
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong> values:IEnumerable&lt;IEnumerable&lt;&#39;T&gt;&gt; -&gt; IEnumerable&lt;IEnumerable&lt;&#39;T&gt;&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.evilznet.com/kunai/img/logo.png" alt="F# Project" style="width: 150px; margin: 10px"/>
+			<ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+				<li class="nav-header">Kunai</li>
+				<li><a href="http://www.evilznet.com/kunai/index.html">Home page</a></li>
+				<li class="divider"></li>
+				<li><a href="http://nuget.org/packages/Kunai">Get Library via NuGet</a></li>
+				<li><a href="http://github.com/evilz/Kunai">Source Code on GitHub</a></li>
+				<li><a href="http://www.evilznet.com/kunai/license.html">License</a></li>
+				<li><a href="http://www.evilznet.com/kunai/release-notes.html">Release Notes</a></li>
+
+				<li class="nav-header">Getting started</li>
+				<li><a href="http://www.evilznet.com/kunai/tutorial.html">Sample tutorial</a></li>
+
+				<li class="nav-header">Documentation</li>
+				<li><a href="http://www.evilznet.com/kunai/reference/index.html">API Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$(".table.table-bordered").addClass("panel panel-info");
+		$(".table.table-bordered thead").addClass("panel-heading");
+		
+	})
+</script>
+</body>
+  </html>

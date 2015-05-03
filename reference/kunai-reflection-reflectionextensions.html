@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ReflectionExtensions - Kunai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Vincent Bourdon"/>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  	<!-- Twitter Bootstrap -->
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+
+  	<!-- Twitter Bootstrap -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="http://www.evilznet.com/kunai/content/style.css" />
+    <script type="text/javascript" src="http://www.evilznet.com/kunai/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div class="container">
+
+
+	<div class="masthead">
+		<ul class="nav nav-pills pull-right">
+			<li><a class="btn btn-flat btn-default" href="http://www.evilznet.com">evilznet.com <div class="ripple-wrapper"></div></a></li>
+			<li><a class="btn btn-flat btn-default" href="http://github.com/evilz/Kunai">github page <div class="ripple-wrapper"></div></a></li>
+		</ul>
+		
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-9" id="main">
+			
+
+
+
+<h1>ReflectionExtensions</h1>
+<div class="xmldoc">
+</div>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
+            CSharpCompile(...)
+          </code>
+          <div class="tip" id="136">
+            <strong>Signature:</strong> (code:string * dllName:string * additionalAssemblies:string []) -&gt; CompilerResults<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '137', 137)" onmouseover="showTip(event, '137', 137)">
+            Description(someEnum)
+          </code>
+          <div class="tip" id="137">
+            <strong>Signature:</strong> someEnum:Enum -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '138', 138)" onmouseover="showTip(event, '138', 138)">
+            Extend(target, source)
+          </code>
+          <div class="tip" id="138">
+            <strong>Signature:</strong> (target:&#39;T * source:&#39;T) -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '139', 139)" onmouseover="showTip(event, '139', 139)">
+            FindCommonAncestor(type, targetType)
+          </code>
+          <div class="tip" id="139">
+            <strong>Signature:</strong> (type:Type * targetType:Type) -&gt; Type<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '140', 140)" onmouseover="showTip(event, '140', 140)">
+            GetAttribute(pi)
+          </code>
+          <div class="tip" id="140">
+            <strong>Signature:</strong> pi:PropertyInfo -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
+            GetAttribute(typeWithAttributes)
+          </code>
+          <div class="tip" id="141">
+            <strong>Signature:</strong> typeWithAttributes:Type -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads the custom attributes from the type</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '142', 142)" onmouseover="showTip(event, '142', 142)">
+            GetAttributes(pi)
+          </code>
+          <div class="tip" id="142">
+            <strong>Signature:</strong> pi:PropertyInfo -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '143', 143)" onmouseover="showTip(event, '143', 143)">
+            GetAttributes(typeWithAttributes)
+          </code>
+          <div class="tip" id="143">
+            <strong>Signature:</strong> typeWithAttributes:Type -&gt; IEnumerable&lt;&#39;T&gt;<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads the custom attributes from the type</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
+            GetDefault(type)
+          </code>
+          <div class="tip" id="144">
+            <strong>Signature:</strong> type:Type -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '145', 145)" onmouseover="showTip(event, '145', 145)">
+            GetPropertyValue(source, property)
+          </code>
+          <div class="tip" id="145">
+            <strong>Signature:</strong> (source:obj * property:string) -&gt; &#39;T<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '146', 146)" onmouseover="showTip(event, '146', 146)">
+            IsNullable(type)
+          </code>
+          <div class="tip" id="146">
+            <strong>Signature:</strong> type:Type -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Return true if the type is a System.Nullable wrapper of a value type</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
+            IsSubclassOfRawGeneric(...)
+          </code>
+          <div class="tip" id="147">
+            <strong>Signature:</strong> (toCheck:Type * baseType:Type) -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Alternative version of  that supports raw generic types (generic types without
+any type parameters).</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.evilznet.com/kunai/img/logo.png" alt="F# Project" style="width: 150px; margin: 10px"/>
+			<ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+				<li class="nav-header">Kunai</li>
+				<li><a href="http://www.evilznet.com/kunai/index.html">Home page</a></li>
+				<li class="divider"></li>
+				<li><a href="http://nuget.org/packages/Kunai">Get Library via NuGet</a></li>
+				<li><a href="http://github.com/evilz/Kunai">Source Code on GitHub</a></li>
+				<li><a href="http://www.evilznet.com/kunai/license.html">License</a></li>
+				<li><a href="http://www.evilznet.com/kunai/release-notes.html">Release Notes</a></li>
+
+				<li class="nav-header">Getting started</li>
+				<li><a href="http://www.evilznet.com/kunai/tutorial.html">Sample tutorial</a></li>
+
+				<li class="nav-header">Documentation</li>
+				<li><a href="http://www.evilznet.com/kunai/reference/index.html">API Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$(".table.table-bordered").addClass("panel panel-info");
+		$(".table.table-bordered thead").addClass("panel-heading");
+		
+	})
+</script>
+</body>
+  </html>

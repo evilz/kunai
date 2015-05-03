@@ -7,12 +7,17 @@
     <meta name="description" content=""/>
     <meta name="author" content="Vincent Bourdon"/>
 
-    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  	<!-- Twitter Bootstrap -->
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
-    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+
+  	<!-- Twitter Bootstrap -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.css" rel="stylesheet"/>
@@ -24,62 +29,452 @@
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="container">
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.evilznet.com">evilznet.com</a></li>
-          <li><a href="http://github.com/evilz/Kunai">github page</a></li>
-        </ul>
-        <h3 class="muted"><a href="http://www.evilznet.com/kunai/index.html">Kunai</a></h3>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="span9" id="main">
-          
+<body>
+
+<div class="container">
+
+
+	<div class="masthead">
+		<ul class="nav nav-pills pull-right">
+			<li><a class="btn btn-flat btn-default" href="http://www.evilznet.com">evilznet.com <div class="ripple-wrapper"></div></a></li>
+			<li><a class="btn btn-flat btn-default" href="http://github.com/evilz/Kunai">github page <div class="ripple-wrapper"></div></a></li>
+		</ul>
+		
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-9" id="main">
+			
 
 <h1>Kunai</h1>
 
 
-  <h2>Kunai Namespace</h2>
+  <h2>Kunai.Cache Namespace</h2>
     <div>
-      <table class="table table-bordered module-list">
+      <table class="table table-bordered type-list">
     <thead>
-      <tr><td>Module</td><td>Description</td></tr>
+      <tr><td>Type</td><td>Description</td></tr>
     </thead>
     <tbody>
         <tr>
-          <td class="module-name">
-            <a href="kunai-library.html">Library</a>
+          <td class="type-name">
+            <a href="kunai-cache-cacheextensions.html">CacheExtensions</a>
           </td>
-          <td class="xmldoc"><p>Documentation for my library</p>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.CollectionExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-collectionext-dataextensions.html">DataExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-collectionext-enumerableextensions.html">EnumerableExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-collectionext-queueextensions.html">QueueExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Configuration Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-configuration-configurationmanagerext.html">ConfigurationManagerExt</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.DateTimeExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-datetimeext-datetimeextensions.html">DateTimeExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-datetimeext-daysselector.html">DaysSelector</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-datetimeext-timeselector.html">TimeSelector</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-datetimeext-weekselector.html">WeekSelector</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-datetimeext-yearsselector.html">YearsSelector</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.DrawingExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-drawingext-colorextensions.html">ColorExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-drawingext-imageextensions.html">ImageExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.ExceptionExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-exceptionext-exceptionextensions.html">ExceptionExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.FileSystemExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-filesystemext-filesystemextensions.html">FileSystemExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Functional Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-functional-linqextensions.html">LinqExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.FunctionalExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-functionalext-functionalextensions.html">FunctionalExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.NetExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-netext-netextensions.html">NetExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.NumberExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-numberext-numberextensions.html">NumberExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.ObjectExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-objectext-objectextensions.html">ObjectExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Reflection Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-reflection-reflectionextensions.html">ReflectionExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.RegexExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-regexext-regexextensions.html">RegexExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Security Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-security-securityextensions.html">SecurityExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Serialization Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-serialization-jsonnetextensions.html">JsonNetExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.Stream Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-stream-scannerextensions.html">ScannerExtensions</a>
+          </td>
+          <td class="xmldoc"><p>Scanner extensions are inspired from Java scanner. You can read next string, number or array from a TextReader</p>
+
+<p>When writing literate programs as Markdown documents, 
+you can also include snippets in other languages.
+These will not be colorized and processed as F# 
+code samples:</p>
+
+<pre><code>[lang=csharp]
+Console.WriteLine("Hello world!");</code></pre>
 </td>
         </tr>
     </tbody>
   </table>
 
     </div>
+  <h2>Kunai.StreamExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-streamext-extensions.html">Extensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
 
-        </div>
-        <div class="span3">
-          <img src="http://www.evilznet.com/kunai/img/logo.png" alt="F# Project" style="width:150px;margin:10px" />  
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-            <li class="nav-header">Kunai</li>
-            <li><a href="http://www.evilznet.com/kunai/index.html">Home page</a></li>
-            <li class="divider"></li>
-            <li><a href="http://nuget.org/packages/Kunai">Get Library via NuGet</a></li>
-            <li><a href="http://github.com/evilz/Kunai">Source Code on GitHub</a></li>
-            <li><a href="http://www.evilznet.com/kunai/license.html">License</a></li>
-            <li><a href="http://www.evilznet.com/kunai/release-notes.html">Release Notes</a></li>
-            
-            <li class="nav-header">Getting started</li>
-            <li><a href="http://www.evilznet.com/kunai/tutorial.html">Sample tutorial</a></li>
-
-            <li class="nav-header">Documentation</li>
-            <li><a href="http://www.evilznet.com/kunai/reference/index.html">API Reference</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-   </body>
+  <h2>Kunai.TextExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-textext-scanfhelper.html">ScanfHelper</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-textext-textextensions.html">TextExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+  <h2>Kunai.UriExt Namespace</h2>
+    <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="kunai-uriext-uriextensions.html">UriExtensions</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+
+		</div>
+		<div class="col-md-3">
+			<img src="http://www.evilznet.com/kunai/img/logo.png" alt="F# Project" style="width: 150px; margin: 10px"/>
+			<ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+				<li class="nav-header">Kunai</li>
+				<li><a href="http://www.evilznet.com/kunai/index.html">Home page</a></li>
+				<li class="divider"></li>
+				<li><a href="http://nuget.org/packages/Kunai">Get Library via NuGet</a></li>
+				<li><a href="http://github.com/evilz/Kunai">Source Code on GitHub</a></li>
+				<li><a href="http://www.evilznet.com/kunai/license.html">License</a></li>
+				<li><a href="http://www.evilznet.com/kunai/release-notes.html">Release Notes</a></li>
+
+				<li class="nav-header">Getting started</li>
+				<li><a href="http://www.evilznet.com/kunai/tutorial.html">Sample tutorial</a></li>
+
+				<li class="nav-header">Documentation</li>
+				<li><a href="http://www.evilznet.com/kunai/reference/index.html">API Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$(".table.table-bordered").addClass("panel panel-info");
+		$(".table.table-bordered thead").addClass("panel-heading");
+		
+	})
+</script>
+</body>
   </html>
