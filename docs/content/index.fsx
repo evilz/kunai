@@ -20,6 +20,14 @@ Documentation
   <div class="span1"></div>
 </div>
 
+When writing literate programs as Markdown documents, 
+you can also include snippets in other languages. 
+These will not be colorized and processed as F# 
+code samples:
+
+    [lang=csharp]
+    Console.WriteLine("Hello world!");
+
 Example
 -------
 
