@@ -4,10 +4,10 @@ using System.Reflection;
 [assembly: AssemblyTitleAttribute("Kunai")]
 [assembly: AssemblyProductAttribute("Kunai")]
 [assembly: AssemblyDescriptionAttribute("kunai4ninja")]
-[assembly: AssemblyVersionAttribute("0.0.2")]
-[assembly: AssemblyFileVersionAttribute("0.0.2")]
+[assembly: AssemblyVersionAttribute("0.0.3")]
+[assembly: AssemblyFileVersionAttribute("0.0.3")]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "0.0.2";
+        internal const string Version = "0.0.3";
     }
 }
