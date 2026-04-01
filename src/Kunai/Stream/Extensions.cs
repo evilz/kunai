@@ -33,38 +33,6 @@ namespace Kunai.StreamExt
 		}
 
 		/// <summary>
-		/// Copies an stream to another stream using the buffer passed.
-		/// </summary>
-		/// <param name="source">source stream</param>
-		/// <param name="destination">destination stream</param>
-		/// <param name="buffer">buffer to use during copy</param>
-		/// <returns>number of bytes copied</returns>
-		public static long CopyTo(this System.IO.Stream source, System.IO.Stream destination, byte[] buffer)
-		{
-			long total = 0;
-			int bytesRead;
-			while (true)
-			{
-				bytesRead = source.Read(buffer, 0, buffer.Length);
-				if (bytesRead == 0)
-					return total;
-				total += bytesRead;
-				destination.Write(buffer, 0, bytesRead);
-			}
-		}
-		/// <summary>
-		/// Copies an stream to another stream using the buffer with specified size.
-		/// </summary>
-		/// <param name="source">source stream</param>
-		/// <param name="destination">destination stream</param>
-		/// <param name="bufferLen">length of buffer to create</param>
-		/// <returns>number of bytes copied</returns>
-		public static long CopyTo(this System.IO.Stream source, System.IO.Stream destination, int bufferLen)
-		{
-			return source.CopyTo(destination, new byte[bufferLen]);
-		}
-
-		/// <summary>
 		/// This is a snippet by Chuhukon see:
 		/// http://www.koodr.com/item/e207aa7f-0ff1-4e8a-a703-e96f2f175bc9
 		/// </summary>

@@ -1,13 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kunai.Cache
 {
+	/// <summary>
+	/// Extension methods for caching enumerables.
+	/// </summary>
 	public static class CacheExtensions
 	{
+		/// <summary>
+		/// Lazily caches the elements of an enumerable so that the source is only iterated once.
+		/// Subsequent iterations use the cached values.
+		/// </summary>
+		/// <typeparam name="T">The type of elements in the sequence.</typeparam>
+		/// <param name="source">The source enumerable to cache.</param>
+		/// <returns>A new enumerable that caches elements as they are first requested.</returns>
 		public static IEnumerable<T> Cache<T>(this IEnumerable<T> source)
 		{
 			return CacheHelper(source.GetEnumerator());
