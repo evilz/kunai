@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 
 namespace Kunai.TextExt
@@ -314,10 +313,6 @@ namespace Kunai.TextExt
 		}
 
 		public ScanFormatExeption(string message, Exception inner) : base(message, inner)
-		{
-		}
-
-		public ScanFormatExeption(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 		}
 	}

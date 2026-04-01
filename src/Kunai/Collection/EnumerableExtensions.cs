@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 
 namespace Kunai.CollectionExt
 {
+	/// <summary>
+	/// Extension methods for <see cref="IEnumerable{T}"/> and related collection types.
+	/// </summary>
 	public static class EnumerableExtensions
 	{
 		private static void Swap(ref char a, ref char b)
@@ -16,6 +18,13 @@ namespace Kunai.CollectionExt
 			a ^= b;
 		}
 
+		/// <summary>
+		/// Creates an enumerable of characters from <paramref name="first"/> to <paramref name="last"/> (inclusive).
+		/// Supports both ascending and descending ranges.
+		/// </summary>
+		/// <param name="first">The starting character.</param>
+		/// <param name="last">The ending character.</param>
+		/// <returns>An enumerable of characters between <paramref name="first"/> and <paramref name="last"/>.</returns>
 		public static IEnumerable<char> To(this char first, char last)
 		{
 			bool reverseRequired = (first > last);
@@ -55,6 +64,13 @@ namespace Kunai.CollectionExt
 				action(item);
 		}
 
+		/// <summary>
+		/// Returns indices of all elements in the sequence that equal <paramref name="value"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="obj">The source sequence.</param>
+		/// <param name="value">The value to search for.</param>
+		/// <returns>An enumerable of zero-based indices of matching elements.</returns>
 		public static IEnumerable<int> IndicesOf<T>(this IEnumerable<T> obj, T value)
 		{
 			return (from i in Enumerable.Range(0, obj.Count())
@@ -62,6 +78,13 @@ namespace Kunai.CollectionExt
 					select i);
 		}
 
+		/// <summary>
+		/// Returns indices of all elements in the sequence that are contained in <paramref name="value"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="obj">The source sequence.</param>
+		/// <param name="value">The values to search for.</param>
+		/// <returns>An enumerable of zero-based indices of matching elements.</returns>
 		public static IEnumerable<int> IndicesOf<T>(this IEnumerable<T> obj, IEnumerable<T> value)
 		{
 			return (from i in Enumerable.Range(0, obj.Count())
@@ -69,6 +92,15 @@ namespace Kunai.CollectionExt
 					select i);
 		}
 
+		/// <summary>
+		/// Returns a sub-sequence of elements from index <paramref name="start"/> (inclusive)
+		/// to index <paramref name="end"/> (exclusive).
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="collection">The source collection.</param>
+		/// <param name="start">The zero-based start index (inclusive).</param>
+		/// <param name="end">The zero-based end index (exclusive).</param>
+		/// <returns>A sub-sequence of the collection.</returns>
 		public static IEnumerable<T> Slice<T>(this IEnumerable<T> collection, int start, int end)
 		{
 			return collection.Skip(start).Take(end - start);
@@ -150,20 +182,6 @@ namespace Kunai.CollectionExt
 		}
 
 
-		// CHECK THIS !
-		public static T[] Shuffle<T>(this T[] list)
-		{
-			var r = new Random((int)DateTime.Now.Ticks);
-			for (int i = list.Length - 1; i > 0; i--)
-			{
-				int j = r.Next(0, i - 1);
-				var e = list[i];
-				list[i] = list[j];
-				list[j] = e;
-			}
-			return list;
-		}
-
 		// TODO : REFECTO !
 		public static string ToHtmlTable<T>(this IEnumerable<T> list, string tableSyle = "table table-bordered")
 		{
@@ -195,16 +213,24 @@ namespace Kunai.CollectionExt
 			return result.ToString();
 		}
 
+		/// <summary>
+		/// Returns <see langword="true"/> if the sequence is <see langword="null"/> or contains no elements.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="source">The sequence to check.</param>
+		/// <returns><see langword="true"/> if <paramref name="source"/> is null or empty; otherwise <see langword="false"/>.</returns>
 		public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
 		{
 			return source == null || !source.Any();
 		}
 
-		public static T Last<T>(this IList<T> list)
-		{
-			return list[list.Count - 1];
-		}
-
+		/// <summary>
+		/// Removes duplicate elements from the collection based on a key produced by <paramref name="Predicate"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="list">The source collection.</param>
+		/// <param name="Predicate">A function that returns an integer key for each element.</param>
+		/// <returns>A sequence of elements with duplicate keys removed.</returns>
 		public static IEnumerable<T> RemoveDuplicates<T>(this ICollection<T> list, Func<T, int> Predicate)
 		{
 			var dict = new Dictionary<int, T>();
@@ -220,15 +246,6 @@ namespace Kunai.CollectionExt
 			return dict.Values.AsEnumerable();
 		}
 
-		public static IEnumerable<T> Reverse<T>(this IEnumerable<T> items)
-		{
-			var enumerable = items as IList<T> ?? items.ToList();
-			for (int i = enumerable.Count() - 1; i >= 0; i--)
-			{
-				yield return enumerable[i];
-			}
-		}
-
 		/// <summary>
 		/// Continues processing items in a collection until the end condition is true.
 		/// </summary>
@@ -241,12 +258,27 @@ namespace Kunai.CollectionExt
 			return collection.TakeWhile(item => !endCondition(item));
 		}
 
+		/// <summary>
+		/// Adds an element to the list and returns the list for fluent chaining.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="list">The list to add to.</param>
+		/// <param name="item">The item to add.</param>
+		/// <returns>The list after adding the item.</returns>
 		public static IList<T> AddElement<T>(this IList<T> list, T item)
 		{
 			list.Add(item);
 			return list;
 		}
 
+		/// <summary>
+		/// Conditionally adds an element to the list and returns the list for fluent chaining.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="list">The list to add to.</param>
+		/// <param name="condition">If <see langword="true"/>, the item is added.</param>
+		/// <param name="item">The item to conditionally add.</param>
+		/// <returns>The list after optionally adding the item.</returns>
 		public static IList<T> AddElementIf<T>(this IList<T> list, bool condition, T item)
 		{
 			if (condition)
@@ -257,12 +289,27 @@ namespace Kunai.CollectionExt
 			return list;
 		}
 
+		/// <summary>
+		/// Adds a range of elements to the list and returns the list for fluent chaining.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="list">The list to add to.</param>
+		/// <param name="items">The items to add.</param>
+		/// <returns>The list after adding all items.</returns>
 		public static IList<T> AddElementRange<T>(this IList<T> list, IEnumerable<T> items)
 		{
 			items.Each(list.Add);
 			return list;
 		}
 
+		/// <summary>
+		/// Conditionally adds a range of elements to the list and returns the list for fluent chaining.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="list">The list to add to.</param>
+		/// <param name="condition">If <see langword="true"/>, the items are added.</param>
+		/// <param name="items">The items to conditionally add.</param>
+		/// <returns>The list after optionally adding the items.</returns>
 		public static IList<T> AddElementRangeIf<T>(this IList<T> list, bool condition, IEnumerable<T> items)
 		{
 			if (condition)
@@ -279,6 +326,12 @@ namespace Kunai.CollectionExt
 			source.Each(obj => obj = value);
 		}
 
+		/// <summary>
+		/// Converts an <see cref="IEnumerator{T}"/> to an <see cref="IEnumerable{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="enumerator">The enumerator to convert.</param>
+		/// <returns>An enumerable that iterates the enumerator.</returns>
 		public static IEnumerable<T> ToEnumerable<T>(this IEnumerator<T> enumerator)
 		{
 			while (enumerator.MoveNext())
@@ -355,6 +408,13 @@ namespace Kunai.CollectionExt
 		}
 
 
+		/// <summary>
+		/// Adds a bulk range of items to an <see cref="ObservableCollection{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of elements.</typeparam>
+		/// <param name="oc">The observable collection to add items to.</param>
+		/// <param name="collection">The items to add.</param>
+		/// <exception cref="ArgumentNullException">Thrown when <paramref name="collection"/> is null.</exception>
 		public static void AddRange<T>(this ObservableCollection<T> oc, IEnumerable<T> collection)
 		{
 			if (collection == null)

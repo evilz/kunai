@@ -1,12 +1,8 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.CSharp;
 
 namespace Kunai.Reflection
 {
@@ -159,25 +155,6 @@ namespace Kunai.Reflection
 										"> is not a publicly-visible type, so the default value cannot be retrieved");
 		}
 
-
-		public static CompilerResults CSharpCompile(this string code, string dllName = "dynamicCompile", params string[] additionalAssemblies)
-		{
-			var csc = new CSharpCodeProvider(new Dictionary<string, string>() { { "CompilerVersion", "v4.0" } });
-			var parameters = new CompilerParameters
-			{
-				ReferencedAssemblies = {
-		  "mscorlib.dll",
-		  "System.Core.dll",
-	   },
-				OutputAssembly = dllName,
-				GenerateExecutable = false,
-				GenerateInMemory = true,
-			};
-
-			parameters.ReferencedAssemblies.AddRange(additionalAssemblies);
-
-			return csc.CompileAssemblyFromSource(parameters, code);
-		}
 
 		public static T GetPropertyValue<T>(this object source, string property)
 		{

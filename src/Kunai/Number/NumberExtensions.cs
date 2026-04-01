@@ -5,6 +5,9 @@ using Kunai.ObjectExt;
 
 namespace Kunai.NumberExt
 {
+	/// <summary>
+	/// Extension methods for numeric types.
+	/// </summary>
 	public static class NumberExtensions
 	{
 		/// <summary>
@@ -17,6 +20,11 @@ namespace Kunai.NumberExt
 				return value.Format("{0:C}");
 			}
 
+		/// <summary>
+		/// Converts a 1-based column index to an Excel column name (e.g. 1 → "A", 27 → "AA").
+		/// </summary>
+		/// <param name="index">The 1-based column index.</param>
+		/// <returns>The Excel column name string.</returns>
 		public static string ExcelColumnName(this int index)
 		{
 			var chars = new[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
@@ -35,6 +43,13 @@ namespace Kunai.NumberExt
 			return columnName;
 		}
 
+		/// <summary>
+		/// Returns <see langword="true"/> if the integer is within [<paramref name="start"/>, <paramref name="end"/>] inclusive.
+		/// </summary>
+		/// <param name="target">The value to test.</param>
+		/// <param name="start">The inclusive lower bound.</param>
+		/// <param name="end">The inclusive upper bound.</param>
+		/// <returns><see langword="true"/> if <paramref name="target"/> is within range; otherwise <see langword="false"/>.</returns>
 		public static bool IsInRange(this int target, int start, int end)
 		{
 
@@ -96,6 +111,11 @@ namespace Kunai.NumberExt
 			return (fileSize + " " + suffix[j]);
 		}
 
+		/// <summary>
+		/// Returns <see langword="true"/> if <paramref name="number"/> is a prime number.
+		/// </summary>
+		/// <param name="number">The number to test.</param>
+		/// <returns><see langword="true"/> if the number is prime; otherwise <see langword="false"/>.</returns>
 		public static bool IsPrime(this int number)
 		{
 			if ((number % 2) == 0)

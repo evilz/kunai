@@ -34,21 +34,6 @@ namespace Kunai.TextExt
 		}
 
 
-		public static bool IsNullOrEmpty(this string s)
-		{
-			return string.IsNullOrEmpty(s);
-		}
-
-		public static bool IsNullOrWhiteSpace(this string s)
-		{
-			return string.IsNullOrWhiteSpace(s);
-		}
-
-		public static string Format(this string format, params object[] args)
-		{
-			return string.Format(format,args);
-		}
-
 		/// <summary>
 		/// Formats the string according to the specified mask
 		/// </summary>
@@ -57,7 +42,7 @@ namespace Kunai.TextExt
 		/// <returns>The formatted string</returns>
 		public static string FormatWithMask(this string input, string mask)
 		{
-			if (input.IsNullOrEmpty()) return input;
+			if (string.IsNullOrEmpty(input)) return input;
 			var output = string.Empty;
 			var index = 0;
 			foreach (var m in mask)

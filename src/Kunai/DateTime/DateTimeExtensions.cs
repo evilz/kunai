@@ -13,7 +13,7 @@ namespace Kunai.DateTimeExt
 		/// <returns>The specified date formatted as a RFC822 date string.</returns>
 		public static string ToRFC822DateString(this DateTime date)
 		{
-			int offset = TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).Hours;
+			int offset = (int)TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).TotalHours;
 			string timeZone = "+" + offset.ToString().PadLeft(2, '0');
 			if (offset < 0)
 			{
