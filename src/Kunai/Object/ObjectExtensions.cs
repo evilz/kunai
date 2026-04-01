@@ -17,7 +17,6 @@ namespace Kunai.ObjectExt
 		/// <typeparam name="U">The target type to convert to.</typeparam>
 		/// <param name="source">The source object.</param>
 		/// <returns>The converted value as <typeparamref name="U"/>.</returns>
-		// TODO : test
 		public static U ChangeType<U>(this object source)
 		{
 			if (source is U)
@@ -104,23 +103,6 @@ namespace Kunai.ObjectExt
 		{
 			return string.Format(format, value);
 		}
-
-		/// <summary>
-		/// Clamps the value to the range [<paramref name="min"/>, <paramref name="max"/>].
-		/// </summary>
-		/// <typeparam name="T">A comparable type.</typeparam>
-		/// <param name="d">The value to constrain.</param>
-		/// <param name="min">The minimum allowed value.</param>
-		/// <param name="max">The maximum allowed value.</param>
-		/// <returns>The value clamped between <paramref name="min"/> and <paramref name="max"/>.</returns>
-		public static T ConstrainToRange<T>(this T d, T min, T max) where T : IComparable
-		{
-			if (d.CompareTo(min) < 0) return min;
-			if (d.CompareTo(max) > 0) return max;
-			return d;
-		}
-
-
 
 		/// <summary>
 		/// Returns <see langword="true"/> if the value is within [<paramref name="lower"/>, <paramref name="upper"/>) (lower-inclusive, upper-exclusive).

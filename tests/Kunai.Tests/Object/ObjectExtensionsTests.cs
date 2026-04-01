@@ -8,24 +8,6 @@ namespace KunaiTests.Object
     public class ObjectExtensionsTests
     {
         [Test]
-        public void ConstrainToRange_ValueBelowMin_ReturnsMin()
-        {
-            Assert.AreEqual(1, (-5).ConstrainToRange(1, 10));
-        }
-
-        [Test]
-        public void ConstrainToRange_ValueAboveMax_ReturnsMax()
-        {
-            Assert.AreEqual(10, 100.ConstrainToRange(1, 10));
-        }
-
-        [Test]
-        public void ConstrainToRange_ValueInRange_ReturnsSameValue()
-        {
-            Assert.AreEqual(5, 5.ConstrainToRange(1, 10));
-        }
-
-        [Test]
         public void IsBetween_ValueWithin_ReturnsTrue()
         {
             Assert.IsTrue(5.IsBetween(1, 10));

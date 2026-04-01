@@ -182,20 +182,6 @@ namespace Kunai.CollectionExt
 		}
 
 
-		// CHECK THIS !
-		public static T[] Shuffle<T>(this T[] list)
-		{
-			var r = new Random((int)DateTime.Now.Ticks);
-			for (int i = list.Length - 1; i > 0; i--)
-			{
-				int j = r.Next(0, i - 1);
-				var e = list[i];
-				list[i] = list[j];
-				list[j] = e;
-			}
-			return list;
-		}
-
 		// TODO : REFECTO !
 		public static string ToHtmlTable<T>(this IEnumerable<T> list, string tableSyle = "table table-bordered")
 		{

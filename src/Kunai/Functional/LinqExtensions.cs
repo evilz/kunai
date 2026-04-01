@@ -1,48 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Kunai.Functional
 {
+	/// <summary>
+	/// Additional LINQ-style extension methods for sequences and collections.
+	/// </summary>
 	public static class LinqExtensions
 	{
-		//	public static ObjectQuery<T> Include<T, T2>(this ObjectQuery<T> data, Expression<Func<T, ICollection<T2>>> property1, Expression<Func<T2, object>> property2)
-		//		where T : class
-		//		where T2 : class
-		//	{
-		//		var name1 = (property1.Body as MemberExpression).Member.Name;
-		//		var name2 = (property2.Body as MemberExpression).Member.Name;
-
-		//		return data.Include(name1 + "." + name2);
-		//	}
-
-		//	public static ObjectQuery<T> Include<T, T2>(this ObjectQuery<T> data, Expression<Func<T, T2>> property1, Expression<Func<T2, object>> property2) where T : class
-		//	{
-		//		var name1 = (property1.Body as MemberExpression).Member.Name;
-		//		var name2 = (property2.Body as MemberExpression).Member.Name;
-
-		//		return data.Include(name1 + "." + name2);
-		//	}
-
-		//	public static ObjectQuery<T> Include<T>(this ObjectQuery<T> data, Expression<Func<T, object>> property) where T : class
-		//	{
-		//		var name = (property.Body as MemberExpression).Member.Name;
-
-		//		return data.Include(name);
-		//	}
-
-
-		public static IEnumerable<T> Distinct<T, TKey>(this IEnumerable<T> @this, Func<T, TKey> keySelector)
-		{
-			return @this.GroupBy(keySelector).Select(grps => grps).Select(e => e.First());
-		}
-
-		/// <summary>
 		/// Converts an enumeration of groupings into a Dictionary of those groupings.
 		/// </summary>
 		/// <typeparam name="TKey">Key type of the grouping and dictionary.</typeparam>
