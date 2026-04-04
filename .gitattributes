@@ -12,6 +12,9 @@
 *.fsproj merge=union
 *.dbproj merge=union
 
+# GitHub Agentic Workflows
+.github/workflows/*.lock.yml linguist-generated=true merge=ours
+
 # Standard to msysgit
 *.doc diff=astextplain
 *.DOC diff=astextplain
