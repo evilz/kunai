@@ -6,6 +6,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- NuGet package metadata -->
+    <PackageId>Kunai</PackageId>
+    <Version>0.0.1-alpha</Version>
+    <Authors>evilz</Authors>
+    <Description>Kunai — a .NET utility library.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/evilz/kunai</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/evilz/kunai</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="9.0.4" />
