@@ -75,19 +75,15 @@ public static class FunctionalExtensions
 	/// <typeparam name="TResult">The output type.</typeparam>
 	/// <param name="func">The function to memoize.</param>
 	/// <returns>A memoized version of <paramref name="func"/>.</returns>
-	// CHECK this
 	public static Func<T, TResult> Memoize<T, TResult>(this Func<T, TResult> func)
 	{
-		var t = new Dictionary<T, TResult>();
+		var cache = new Dictionary<T, TResult>();
 		return n =>
 		{
-			if (t.ContainsKey(n)) return t[n];
-			else
-			{
-				var result = func(n);
-				t.Add(n, result);
-				return result;
-			}
+			if (cache.TryGetValue(n, out var cached)) return cached;
+			var result = func(n);
+			cache.Add(n, result);
+			return result;
 		};
 	}
 }

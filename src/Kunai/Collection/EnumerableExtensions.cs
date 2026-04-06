@@ -149,7 +149,7 @@ public static class EnumerableExtensions
 	{
 		if (sequence == null)
 		{
-			throw new ArgumentNullException();
+			throw new ArgumentNullException(nameof(sequence));
 		}
 
 		if (!sequence.Any())
@@ -158,9 +158,8 @@ public static class EnumerableExtensions
 		}
 
 		//optimization for ICollection<T>
-		if (sequence is ICollection<T>)
+		if (sequence is ICollection<T> col)
 		{
-			ICollection<T> col = (ICollection<T>)sequence;
 			return col.ElementAt(random.Next(col.Count));
 		}
 
@@ -346,7 +345,7 @@ public static class EnumerableExtensions
 		
 
 		return select == 0
-			? new[] { new T[0] }
+			? new[] { Array.Empty<T>() }
 			: source.SelectMany((element, index) =>
 			   source
 				   .Skip(repetition ? index : index + 1)
@@ -362,19 +361,8 @@ public static class EnumerableExtensions
 	/// <param name="list">The enumeration</param>
 	/// <param name="separator">A String</param>
 	/// <returns>A String consisting of the elements of value interspersed with the separator string.</returns>
-	public static string ToString<T>(this IEnumerable<T> list, string separator)
-	{
-		StringBuilder sb = new StringBuilder();
-		foreach (var obj in list)
-		{
-			if (sb.Length > 0)
-			{
-				sb.Append(separator);
-			}
-			sb.Append(obj);
-		}
-		return sb.ToString();
-	}
+	public static string ToString<T>(this IEnumerable<T> list, string separator) =>
+		string.Join(separator, list);
 
 
 	/// <summary>

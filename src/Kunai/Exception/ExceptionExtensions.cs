@@ -40,69 +40,52 @@ public static class ExceptionExtensions
 
 		if (!string.IsNullOrEmpty(additionalMessage))
 		{
-			msg.Append(additionalMessage);
-			msg.Append(Environment.NewLine);
+			msg.AppendLine(additionalMessage);
 		}
 
 		if (ex != null)
 		{
-			try
+			Exception orgEx = ex;
+
+			msg.AppendLine("Exception:");
+			while (orgEx != null)
 			{
-				Exception orgEx = ex;
+				msg.AppendLine(orgEx.Message);
+				orgEx = orgEx.InnerException;
+			}
 
-				msg.Append("Exception:");
-				msg.Append(Environment.NewLine);
-				while (orgEx != null)
+			if (ex.Data != null)
+			{
+				foreach (object i in ex.Data)
 				{
-					msg.Append(orgEx.Message);
-					msg.Append(Environment.NewLine);
-					orgEx = orgEx.InnerException;
-				}
-
-				if (ex.Data != null)
-				{
-					foreach (object i in ex.Data)
-					{
-						msg.Append("Data :");
-						msg.Append(i.ToString());
-						msg.Append(Environment.NewLine);
-					}
-				}
-
-				if (ex.StackTrace != null)
-				{
-					msg.Append("StackTrace:");
-					msg.Append(Environment.NewLine);
-					msg.Append(ex.StackTrace.ToString());
-					msg.Append(Environment.NewLine);
-				}
-
-				if (ex.Source != null)
-				{
-					msg.Append("Source:");
-					msg.Append(Environment.NewLine);
-					msg.Append(ex.Source);
-					msg.Append(Environment.NewLine);
-				}
-
-				if (ex.TargetSite != null)
-				{
-					msg.Append("TargetSite:");
-					msg.Append(Environment.NewLine);
-					msg.Append(ex.TargetSite.ToString());
-					msg.Append(Environment.NewLine);
-				}
-
-				Exception baseException = ex.GetBaseException();
-				if (baseException != null)
-				{
-					msg.Append("BaseException:");
-					msg.Append(Environment.NewLine);
-					msg.Append(ex.GetBaseException());
+					msg.Append("Data :");
+					msg.AppendLine(i.ToString());
 				}
 			}
-			finally
+
+			if (ex.StackTrace != null)
 			{
+				msg.AppendLine("StackTrace:");
+				msg.AppendLine(ex.StackTrace.ToString());
+			}
+
+			if (ex.Source != null)
+			{
+				msg.AppendLine("Source:");
+				msg.AppendLine(ex.Source);
+			}
+
+			if (ex.TargetSite != null)
+			{
+				msg.AppendLine("TargetSite:");
+				msg.AppendLine(ex.TargetSite.ToString());
+			}
+
+			Exception baseException = ex.GetBaseException();
+			if (baseException != null)
+			{
+				msg.AppendLine("BaseException:");
+				msg.Append(ex.GetBaseException());
 			}
 		}
 		return msg.ToString();

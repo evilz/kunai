@@ -39,16 +39,10 @@ public static class ReflectionExtensions
 	public static IEnumerable<T> GetAttributes<T>(this Type typeWithAttributes)
 		where T : Attribute
 	{
-		// Try to find the configuration attribute for the default logger if it exists
-		object[] configAttributes = Attribute.GetCustomAttributes(typeWithAttributes,
-			typeof(T), false);
-
-		if (configAttributes != null)
+		object[] configAttributes = Attribute.GetCustomAttributes(typeWithAttributes, typeof(T), false);
+		foreach (T attribute in configAttributes)
 		{
-			foreach (T attribute in configAttributes)
-			{
-				yield return attribute;
-			}
+			yield return attribute;
 		}
 	}
 
