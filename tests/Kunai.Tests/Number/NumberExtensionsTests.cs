@@ -1,8 +1,8 @@
 using Kunai.NumberExt;
 using NUnit.Framework;
 
-namespace KunaiTests.Number
-{
+namespace KunaiTests.Number;
+
     [TestFixture]
     public class NumberExtensionsTests
     {
@@ -133,4 +133,3 @@ namespace KunaiTests.Number
             Assert.AreEqual(2.138, result, 0.001);
         }
     }
-}

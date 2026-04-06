@@ -2,8 +2,8 @@ using System;
 using Kunai.FunctionalExt;
 using NUnit.Framework;
 
-namespace KunaiTests.Functional
-{
+namespace KunaiTests.Functional;
+
     [TestFixture]
     public class FunctionalExtensionsTests
     {
@@ -86,4 +86,3 @@ namespace KunaiTests.Functional
             Assert.AreEqual(9, memoized(3));
         }
     }
-}

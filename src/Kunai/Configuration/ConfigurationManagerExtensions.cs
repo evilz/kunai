@@ -1,17 +1,16 @@
-﻿using System.Configuration;
+using System.Configuration;
 
-namespace Kunai.Configuration
+namespace Kunai.Configuration;
+
+public static class ConfigurationManagerExt
 {
-	public static class ConfigurationManagerExt
+	public static T AppSettings<T>(string key) where T : struct
 	{
-		public static T AppSettings<T>(string key) where T : struct
-		{
-			if (string.IsNullOrWhiteSpace(key))
-				return default(T);
+		if (string.IsNullOrWhiteSpace(key))
+			return default;
 
-			AppSettingsReader r = new AppSettingsReader();
-			var val = r.GetValue(key, typeof(T));
-			return (T)val;
-		}
+		AppSettingsReader r = new AppSettingsReader();
+		var val = r.GetValue(key, typeof(T));
+		return (T)val;
 	}
 }
