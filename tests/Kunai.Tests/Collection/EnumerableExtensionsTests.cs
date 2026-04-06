@@ -5,8 +5,8 @@ using System.Linq;
 using Kunai.CollectionExt;
 using NUnit.Framework;
 
-namespace KunaiTests.Collection
-{
+namespace KunaiTests.Collection;
+
     [TestFixture]
     public class EnumerableExtensionsTests
     {
@@ -181,4 +181,3 @@ namespace KunaiTests.Collection
             CollectionAssert.AreEqual(new[] { 10, 20, 30 }, result);
         }
     }
-}

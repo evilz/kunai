@@ -1,8 +1,8 @@
 using Kunai.Security;
 using NUnit.Framework;
 
-namespace KunaiTests.Security
-{
+namespace KunaiTests.Security;
+
     [TestFixture]
     public class SecurityExtensionsTests
     {
@@ -72,4 +72,3 @@ namespace KunaiTests.Security
             Assert.AreEqual(11, secure.Length);
         }
     }
-}

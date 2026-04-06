@@ -2,8 +2,8 @@ using System;
 using Kunai.DateTimeExt;
 using NUnit.Framework;
 
-namespace KunaiTests.DateTime
-{
+namespace KunaiTests.DateTime;
+
     [TestFixture]
     public class DateTimeExtensionsTests
     {
@@ -125,4 +125,3 @@ namespace KunaiTests.DateTime
             Assert.IsTrue(result.Length > 0);
         }
     }
-}

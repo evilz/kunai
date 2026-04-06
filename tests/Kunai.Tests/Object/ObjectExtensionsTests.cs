@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Kunai.ObjectExt;
 using NUnit.Framework;
 
-namespace KunaiTests.Object
-{
+namespace KunaiTests.Object;
+
     [TestFixture]
     public class ObjectExtensionsTests
     {
@@ -143,4 +143,3 @@ namespace KunaiTests.Object
             public int Value { get; set; }
         }
     }
-}

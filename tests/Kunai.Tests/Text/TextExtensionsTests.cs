@@ -1,8 +1,8 @@
 using Kunai.TextExt;
 using NUnit.Framework;
 
-namespace KunaiTests.Text
-{
+namespace KunaiTests.Text;
+
     [TestFixture]
     public class TextExtensionsTests
     {
@@ -291,4 +291,3 @@ namespace KunaiTests.Text
             Assert.AreEqual("Hello", sb.ToString());
         }
     }
-}
