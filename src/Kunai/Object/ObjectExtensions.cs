@@ -71,7 +71,7 @@ public static class ObjectExtensions
 	/// <param name="val">The value to check.</param>
 	/// <returns><see langword="true"/> if the value is the default; otherwise <see langword="false"/>.</returns>
 	public static bool IsDefault<T>(this T val) =>
-		val.Equals(default);
+		val.Equals(default(T));
 
 	/// <summary>
 	/// Returns <see langword="true"/> if the value is contained within the specified collection.
