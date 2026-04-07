@@ -361,8 +361,15 @@ public static class EnumerableExtensions
 	/// <param name="list">The enumeration</param>
 	/// <param name="separator">A String</param>
 	/// <returns>A String consisting of the elements of value interspersed with the separator string.</returns>
-	public static string ToString<T>(this IEnumerable<T> list, string separator) =>
-		string.Join(separator, list);
+	public static string ToString<T>(this IEnumerable<T> list, string separator)
+	{
+		if (list == null)
+		{
+			throw new NullReferenceException();
+		}
+
+		return string.Join(separator, list);
+	}
 
 
 	/// <summary>

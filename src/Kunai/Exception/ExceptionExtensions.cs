@@ -85,7 +85,7 @@ public static class ExceptionExtensions
 			if (baseException != null)
 			{
 				msg.AppendLine("BaseException:");
-				msg.Append(ex.GetBaseException());
+				msg.Append(baseException);
 			}
 		}
 		return msg.ToString();
