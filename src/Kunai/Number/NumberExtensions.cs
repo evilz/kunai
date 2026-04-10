@@ -11,14 +11,12 @@ namespace Kunai.NumberExt;
 public static class NumberExtensions
 {
 	/// <summary>
-		/// Format a double using the local culture currency settings.
-		/// </summary>
-		/// <param name="value">The double to be formatted.</param>
-		/// <returns>The double formatted based on the local culture currency settings.</returns>
-		public static string ToLocalCurrencyString(this double value)
-		{
-			return value.Format("{0:C}");
-		}
+	/// Formats a double using the local culture currency settings.
+	/// </summary>
+	/// <param name="value">The double to be formatted.</param>
+	/// <returns>The double formatted based on the local culture currency settings.</returns>
+	public static string ToLocalCurrencyString(this double value) =>
+		value.Format("{0:C}");
 
 	/// <summary>
 	/// Converts a 1-based column index to an Excel column name (e.g. 1 → "A", 27 → "AA").
@@ -111,7 +109,7 @@ public static class NumberExtensions
 			return number == 2;
 		}
 		int sqrt = (int)Math.Sqrt(number);
-		for (int t = 3; t <= sqrt; t = t + 2)
+		for (int t = 3; t <= sqrt; t += 2)
 		{
 			if (number % t == 0)
 			{

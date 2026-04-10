@@ -113,8 +113,7 @@ public static class TextExtensions
 	public static T ToEnum<T>(this string value) where T : struct
 	{
 		if (string.IsNullOrEmpty(value)) return default;
-		T result;
-		return Enum.TryParse<T>(value, true, out result) ? result : default;
+		return Enum.TryParse<T>(value, true, out var result) ? result : default;
 	}
 	
 		public static string GetEnumDescription<T>(string value)
@@ -481,12 +480,7 @@ public static class TextExtensions
 	{
 		int asciiBytesCount = Encoding.ASCII.GetByteCount(value);
 		int unicodBytesCount = Encoding.UTF8.GetByteCount(value);
-
-		if (asciiBytesCount != unicodBytesCount)
-		{
-			return true;
-		}
-		return false;
+		return asciiBytesCount != unicodBytesCount;
 	}
 
 	public static bool IsValidEmailAddress(this string s)

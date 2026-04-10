@@ -19,8 +19,8 @@ public static class ObjectExtensions
 	/// <returns>The converted value as <typeparamref name="U"/>.</returns>
 	public static U ChangeType<U>(this object source)
 	{
-		if (source is U)
-			return (U)source;
+		if (source is U u)
+			return u;
 
 		var destinationType = typeof(U);
 		if (destinationType.IsGenericType && destinationType.GetGenericTypeDefinition() == typeof(Nullable<>))
@@ -34,14 +34,10 @@ public static class ObjectExtensions
 	/// </summary>
 	/// <param name="source">The source object.</param>
 	/// <returns>A dictionary mapping property names to their values.</returns>
-	public static Dictionary<string, object> GetPropertyDictionary(this object source)
-	{
-		var properties = source.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public);
-
-		var result = properties.ToDictionary(propertyInfo => propertyInfo.Name, propertyInfo => propertyInfo.GetValue(source));
-
-		return result;
-	}
+	public static Dictionary<string, object> GetPropertyDictionary(this object source) =>
+		source.GetType()
+			.GetProperties(BindingFlags.Instance | BindingFlags.Public)
+			.ToDictionary(pi => pi.Name, pi => pi.GetValue(source));
 
 	/// <summary>
 	/// Returns the first non-null value from the arguments, or the default value of <typeparamref name="T"/> if all are null.
